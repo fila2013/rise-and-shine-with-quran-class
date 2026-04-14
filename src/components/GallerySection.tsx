@@ -6,10 +6,10 @@ import gallery3 from '@/assets/gallery-3.webp';
 import gallery4 from '@/assets/gallery-4.webp';
 
 const photos = [
-  { src: gallery1, alt: 'Belajar Al-Quran bersama' },
-  { src: gallery2, alt: 'Tahfidz Quran di panggung' },
-  { src: gallery3, alt: 'Foto bersama siswa-siswi' },
-  { src: gallery4, alt: 'Dekorasi acara' },
+  { src: gallery1, alt: 'Kelas Halimah As-Sadiyyah' },
+  { src: gallery2, alt: 'Kelas Hamnah binti Jahsy' },
+  { src: gallery3, alt: 'Kelas Hamza ibn Abd al-Muttalib' },
+  { src: gallery4, alt: 'Kelas Zubair bin al-Awwam' },
 ];
 
 const GallerySection = () => {
