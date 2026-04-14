@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
-const MUSIC_URL = 'https://cdn.pixabay.com/audio/2024/11/28/audio_3721f494b1.mp3';
+const MUSIC_URL = 'https://sndup.net/fsc73/d';
 
 const MusicPlayer = () => {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -12,6 +12,15 @@ const MusicPlayer = () => {
     audio.loop = true;
     audio.volume = 0.4;
     audioRef.current = audio;
+
+    // Autoplay attempt
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        setPlaying(false);
+      });
+    }
+
     return () => {
       audio.pause();
       audio.src = '';
