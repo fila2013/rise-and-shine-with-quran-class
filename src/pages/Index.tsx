@@ -3,8 +3,10 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Particles from '@/components/Particles';
 import CoverSection from '@/components/CoverSection';
 import ScheduleSection from '@/components/ScheduleSection';
+import GallerySection from '@/components/GallerySection';
 import LocationSection from '@/components/LocationSection';
 import FooterSection from '@/components/FooterSection';
+import MusicPlayer from '@/components/MusicPlayer';
 
 const Index = () => {
   const [opened, setOpened] = useState(false);
