@@ -1,16 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useRef } from 'react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import Particles from '@/components/Particles';
+import CoverSection from '@/components/CoverSection';
+import ScheduleSection from '@/components/ScheduleSection';
+import LocationSection from '@/components/LocationSection';
+import FooterSection from '@/components/FooterSection';
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [opened, setOpened] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  useScrollReveal();
+
+  const handleOpen = () => {
+    setOpened(true);
+    setTimeout(() => {
+      contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <Particles />
+
+      {/* Cover */}
+      <CoverSection onOpen={handleOpen} />
+
+      {/* Content sections */}
+      <div
+        ref={contentRef}
+        className={`transition-all duration-1000 ${opened ? 'opacity-100 max-h-[100000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
+      >
+        <ScheduleSection />
+        <LocationSection />
+        <FooterSection />
+      </div>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
