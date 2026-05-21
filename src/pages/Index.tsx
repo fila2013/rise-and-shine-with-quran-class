@@ -2,9 +2,10 @@ import { useState, useRef } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Particles from '@/components/Particles';
 import CoverSection from '@/components/CoverSection';
+import PoemSection from '@/components/PoemSection';
+import InvitationSection from '@/components/InvitationSection';
 import ScheduleSection from '@/components/ScheduleSection';
 import GallerySection from '@/components/GallerySection';
-import LocationSection from '@/components/LocationSection';
 import FooterSection from '@/components/FooterSection';
 import MusicPlayer from '@/components/MusicPlayer';
 
@@ -33,9 +34,10 @@ const Index = () => {
         ref={contentRef}
         className={`transition-all duration-1000 ${opened ? 'opacity-100 max-h-[100000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
       >
+        <PoemSection />
+        <InvitationSection />
         <ScheduleSection />
         <GallerySection />
-        <LocationSection />
         <FooterSection />
       </div>
     </div>
