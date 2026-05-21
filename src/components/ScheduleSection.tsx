@@ -1,20 +1,16 @@
 import flowers from '@/assets/flowers.png';
 
 const scheduleData = [
-  { time: '07.15 – 07.30', desc: 'Pembukaan dan Pembacaan Ayat Suci Al-Quran, Saritilawah dan Doa' },
-  { time: '07.30 – 07.40', desc: 'Menyanyikan Lagu Indonesia Raya, Mars Fitrah Insani, Mars JSIT' },
+  { time: '07.15 – 07.30', desc: 'Registrasi dan Pembukaan' },
+  { time: '07.30 – 07.40', desc: 'Menyanyikan lagu Indonesia Raya, Mars JSIT dan Mars Fitrah Insani' },
   { time: '07.40 – 07.55', desc: 'Performance Tari' },
   { time: '07.55 – 08.25', desc: 'Sambutan-sambutan' },
-  { time: '08.25 – 08.40', desc: 'Sesi foto bersama dan Penutup' },
-  { time: '08.40 – 09.00', desc: 'Uji Publik siswa-siswi level 6 Doa khatmil Qur\'an, dan pemberian mahkota kepada orang tua' },
-  { time: '09.00 – 09.25', desc: 'Prosesi pelepasan, pemberian penghargaan dan Surat Keterangan Lulus' },
-  { time: '09.25 – 09.40', desc: 'Pengumuman prestasi peserta didik (hafalan terbanyak, Tilawah terbanyak, hafalan Mutqin, Cognitif dan afektif)' },
+  { time: '08.25 – 08.50', desc: 'Sesi foto bersama dan penutup' },
+  { time: '08.50 – 09.00', desc: "Parade Qur'an dan Uji Publik siswa-siswi level 6" },
+  { time: '09.00 – 09.40', desc: 'Prosesi pelepasan dan pengumuman prestasi peserta didik' },
   { time: '09.40 – 09.50', desc: 'Sambutan orang tua' },
-  { time: '09.50 – 10.10', desc: 'Performance Drama Musikal "Pejuang Qur\'an" Putra' },
-  { time: '10.10 – 10.30', desc: 'Performance Musikalisasi Puisi "Birrul Walidain" Putra' },
-  { time: '10.30 – 10.50', desc: 'Performance "Combined Performance"' },
-  { time: '10.50 – 11.10', desc: 'Pidato perpisahan dari perwakilan siswa kelas 6' },
-  { time: '11.10 – 11.25', desc: 'Menyanyikan lagu "doaku untukmu guru"' },
+  { time: '09.50 – 10.50', desc: 'Performance level 6' },
+  { time: '10.50 – 11.25', desc: 'Pidato perpisahan perwakilan level 6' },
   { time: '11.25 – 11.30', desc: 'Penutupan' },
 ];
 
