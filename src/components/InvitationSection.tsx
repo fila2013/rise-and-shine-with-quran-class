@@ -1,5 +1,6 @@
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import lantern from '@/assets/lantern.png';
+import Countdown from './Countdown';
 
 const InvitationSection = () => {
   const details = [
@@ -75,6 +76,8 @@ const InvitationSection = () => {
             Buka di Google Maps
           </a>
         </div>
+
+        <Countdown />
 
         <p className="reveal mt-8 text-foreground/80 text-sm md:text-base leading-relaxed px-2">
           Atas kehadiran Bapak/Ibu dalam mendukung acara tersebut,
