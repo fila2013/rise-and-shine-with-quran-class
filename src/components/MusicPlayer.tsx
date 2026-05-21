@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
-const MUSIC_URL = '/public/sebiruhariini.mp3';
+const MUSIC_URL = `${import.meta.env.BASE_URL}sebiruhariini.mp3`;
 
 const MusicPlayer = () => {
   const [playing, setPlaying] = useState(false);
