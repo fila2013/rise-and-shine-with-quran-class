@@ -9,9 +9,15 @@ interface CoverSectionProps {
 
 const CoverSection = ({ onOpen }: CoverSectionProps) => {
   const [show, setShow] = useState(false);
+  const [guestName, setGuestName] = useState<string>('');
 
   useEffect(() => {
     setTimeout(() => setShow(true), 300);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const to = params.get('to') || params.get('kepada') || params.get('nama');
+      if (to) setGuestName(decodeURIComponent(to.replace(/\+/g, ' ')));
+    } catch {}
   }, []);
 
   return (
@@ -72,14 +78,17 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
           </p>
         </div>
 
+        {/* Guest name */}
+        <div className={`mt-6 transition-all duration-1000 delay-[1300ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
+          <p className="text-foreground/70 text-xs md:text-sm">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <p className="font-script text-gold-gradient text-2xl md:text-4xl mt-1">
+            {guestName || 'Tamu Undangan'}
+          </p>
+        </div>
+
         {/* Note */}
         <div className={`mt-6 mx-auto max-w-xs border border-primary/40 rounded-lg px-4 py-2 bg-secondary/50 backdrop-blur animate-pulse-glow transition-all duration-1000 delay-[1400ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-primary text-xs md:text-sm font-medium">📋 Berlaku untuk 2 orang</p>
-        </div>
-
-        <div className={`mt-4 text-foreground/60 text-sm transition-all duration-1000 delay-[1500ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
-          <p>📅 Sabtu, 13 Juni 2026</p>
-          <p>📍 Emersia Hotel & Resort, Bandar Lampung</p>
         </div>
       </div>
 
