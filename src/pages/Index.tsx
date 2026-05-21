@@ -16,6 +16,7 @@ const Index = () => {
 
   const handleOpen = () => {
     setOpened(true);
+    window.dispatchEvent(new Event('start-music'));
     setTimeout(() => {
       contentRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, 100);

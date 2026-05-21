@@ -69,7 +69,7 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
           A Special Moment<br />for the 8<sup>th</sup> Generation
         </p>
 
-        <div className={`mt-6 transition-all duration-1000 delay-[1200ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`mt-6 transition-all duration-1000 [transition-delay:1200ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
           <p className="font-display text-foreground text-sm md:text-base font-semibold">
             SDIT FITRAH INSANI LANGKAPURA
           </p>
@@ -79,7 +79,7 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
         </div>
 
         {/* Guest name */}
-        <div className={`mt-6 transition-all duration-1000 delay-[1300ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`mt-6 transition-all duration-1000 [transition-delay:1300ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-foreground/70 text-xs md:text-sm">Kepada Yth. Bapak/Ibu/Saudara/i</p>
           <p className="font-script text-gold-gradient text-2xl md:text-4xl mt-1">
             {guestName || 'Tamu Undangan'}
@@ -87,7 +87,7 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
         </div>
 
         {/* Note */}
-        <div className={`mt-6 mx-auto max-w-xs border border-primary/40 rounded-lg px-4 py-2 bg-secondary/50 backdrop-blur animate-pulse-glow transition-all duration-1000 delay-[1400ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`mt-6 mx-auto max-w-xs border border-primary/40 rounded-lg px-4 py-2 bg-secondary/50 backdrop-blur animate-pulse-glow transition-all duration-1000 [transition-delay:1400ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-primary text-xs md:text-sm font-medium">📋 Berlaku untuk 2 orang</p>
         </div>
       </div>
@@ -95,7 +95,7 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
       {/* Open button */}
       <button
         onClick={onOpen}
-        className={`mt-8 group flex flex-col items-center gap-2 transition-all duration-1000 delay-[1800ms] ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+        className={`mt-8 group flex flex-col items-center gap-2 transition-all duration-1000 [transition-delay:1800ms] ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       >
         <span className="px-8 py-3 rounded-full bg-gold-gradient text-primary-foreground font-semibold text-sm md:text-base shadow-gold hover:scale-105 transition-transform">
           Buka Undangan
