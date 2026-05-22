@@ -31,7 +31,7 @@ const InvitationSection = () => {
       <div className="max-w-2xl mx-auto relative z-10 text-center">
         <div className="reveal">
           <p className="font-arabic text-gold-gradient text-2xl md:text-3xl italic mb-2">
-            Assalamu'alaikum Wr. Wb.
+            Assalamualaikum Warahmatullahi Wabarakatuh.
           </p>
           <div className="flex items-center justify-center gap-3 my-4">
             <span className="h-px w-12 bg-gold-gradient" />
