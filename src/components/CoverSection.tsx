@@ -9,13 +9,20 @@ interface CoverSectionProps {
 
 const CoverSection = ({ onOpen }: CoverSectionProps) => {
   const [show, setShow] = useState(false);
+  const [guestTitle, setGuestTitle] = useState<string>('');
   const [guestName, setGuestName] = useState<string>('');
 
   useEffect(() => {
     setTimeout(() => setShow(true), 300);
     try {
       const params = new URLSearchParams(window.location.search);
+      const title =
+        params.get('title') ||
+        params.get('jabatan') ||
+        params.get('instansi') ||
+        params.get('posisi');
       const to = params.get('to') || params.get('kepada') || params.get('nama');
+      if (title) setGuestTitle(decodeURIComponent(title.replace(/\+/g, ' ')));
       if (to) setGuestName(decodeURIComponent(to.replace(/\+/g, ' ')));
     } catch {}
   }, []);
@@ -81,7 +88,12 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
         {/* Guest name */}
         <div className={`mt-6 transition-all duration-1000 [transition-delay:1300ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-foreground/70 text-xs md:text-sm">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-          <p className="font-script text-gold-gradient text-2xl md:text-4xl mt-1">
+          {guestTitle ? (
+            <p className="font-display text-foreground/90 text-base md:text-lg font-semibold mt-1">
+              {guestTitle}
+            </p>
+          ) : null}
+          <p className="font-display text-gold-gradient text-2xl md:text-4xl font-bold mt-1 leading-tight">
             {guestName || 'Tamu Undangan'}
           </p>
         </div>
