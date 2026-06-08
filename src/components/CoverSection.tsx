@@ -98,10 +98,6 @@ const CoverSection = ({ onOpen }: CoverSectionProps) => {
           </p>
         </div>
 
-        {/* Note */}
-        <div className={`mt-6 mx-auto max-w-xs border border-primary/40 rounded-lg px-4 py-2 bg-secondary/50 backdrop-blur animate-pulse-glow transition-all duration-1000 [transition-delay:1400ms] ${show ? 'opacity-100' : 'opacity-0'}`}>
-          <p className="text-primary text-xs md:text-sm font-medium">📋 Berlaku untuk 2 orang</p>
-        </div>
       </div>
 
       {/* Open button */}
